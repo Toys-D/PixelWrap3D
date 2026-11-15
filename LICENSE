@@ -1,0 +1,132 @@
+PIXEL WRAP 3D — FREEWARE LICENSE
+
+Copyright © 2026 Pixmap Labs. All rights reserved.
+
+Pixel Wrap 3D (the "Software") is freeware. It is licensed, not sold. By
+downloading, installing or using the Software you accept the terms below.
+
+1. What you may do
+
+   You may download the Software from its official page,
+   https://github.com/Toys-D/PixelWrap3D, install it on any number of your
+   own computers and use it free of charge, for personal and commercial work.
+   The images you create with the Software are yours.
+
+2. What you may not do
+
+   You may not:
+   - modify, adapt or translate the Software or any part of it, or create
+     derivative works based on it;
+   - decompile, disassemble or reverse engineer the Software, except where
+     and only to the extent that applicable law expressly permits it despite
+     this restriction;
+   - sell, rent, lease, sublicense, publish or otherwise distribute the
+     Software, on its own or as part of another product; to share it, share
+     the link to the official page;
+   - remove or alter the copyright notices or this license.
+
+3. Ownership
+
+   All rights in the Software not expressly granted in section 1 are reserved
+   by Pixmap Labs. No rights to the source code of the Software are granted.
+   The fact that any part of the code can be read does not grant any right to
+   use it beyond section 1.
+
+4. Third-party components
+
+   The Software includes three.js (https://threejs.org), distributed under
+   the MIT License. Its copyright notice and license text are in the file
+   THIRD-PARTY-NOTICES.txt that comes with the Software. Third-party
+   components are governed by their own licenses, not by this one.
+
+5. No warranty
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+   PIXMAP LABS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+   AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+   CONNECTION WITH THE SOFTWARE OR THE USE OF IT.
+
+6. Termination
+
+   This license ends automatically if you break any of its terms. You must
+   then stop using the Software and delete all copies of it.
+
+7. Trademarks
+
+   Adobe and Photoshop are trademarks of Adobe Inc. Pixel Wrap 3D is an
+   independent plugin and is not affiliated with or endorsed by Adobe.
+
+8. Language
+
+   This license is given in English and in Russian. If the two texts differ,
+   the English text prevails.
+
+-------------------------------------------------------------------------------
+
+PIXEL WRAP 3D — ЛИЦЕНЗИЯ НА БЕСПЛАТНОЕ ИСПОЛЬЗОВАНИЕ
+
+© 2026 Pixmap Labs. Все права защищены.
+
+Pixel Wrap 3D («Программа») распространяется бесплатно. Программа не
+продаётся — предоставляется право на её использование. Скачивая,
+устанавливая или используя Программу, вы принимаете условия ниже.
+
+1. Что можно
+
+   Скачивать Программу с её официальной страницы
+   https://github.com/Toys-D/PixelWrap3D, устанавливать на любое число своих
+   компьютеров и пользоваться ею бесплатно — для личной и коммерческой работы.
+   Изображения, созданные с помощью Программы, принадлежат вам.
+
+2. Чего нельзя
+
+   - изменять, дорабатывать или переводить Программу или любую её часть,
+     создавать на её основе производные работы;
+   - декомпилировать, дизассемблировать и иным образом исследовать устройство
+     Программы, кроме случаев и только в той мере, в какой это прямо разрешает
+     применимый закон вопреки этому запрету;
+   - продавать, сдавать в аренду, сублицензировать, публиковать или иначе
+     распространять Программу — отдельно или в составе другого продукта;
+     чтобы поделиться Программой, делитесь ссылкой на официальную страницу;
+   - удалять или изменять уведомления об авторских правах и эту лицензию.
+
+3. Права
+
+   Все права на Программу, прямо не предоставленные в разделе 1, принадлежат
+   Pixmap Labs. Права на исходный код Программы не предоставляются. То, что
+   какую-то часть кода можно прочитать, не даёт права использовать её сверх
+   раздела 1.
+
+4. Сторонние компоненты
+
+   В Программу входит three.js (https://threejs.org), распространяемый по
+   лицензии MIT. Его уведомление об авторских правах и текст лицензии — в
+   файле THIRD-PARTY-NOTICES.txt, который поставляется вместе с Программой.
+   На сторонние компоненты распространяются их собственные лицензии, а не эта.
+
+5. Без гарантий
+
+   ПРОГРАММА ПРЕДОСТАВЛЯЕТСЯ «КАК ЕСТЬ», БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ЯВНЫХ ИЛИ
+   ПОДРАЗУМЕВАЕМЫХ, ВКЛЮЧАЯ ГАРАНТИИ ТОВАРНОЙ ПРИГОДНОСТИ, ПРИГОДНОСТИ ДЛЯ
+   ОПРЕДЕЛЁННОЙ ЦЕЛИ И НЕНАРУШЕНИЯ ПРАВ. PIXMAP LABS НИ ПРИ КАКИХ
+   ОБСТОЯТЕЛЬСТВАХ НЕ НЕСЁТ ОТВЕТСТВЕННОСТИ ПО ЛЮБЫМ ТРЕБОВАНИЯМ, ЗА УБЫТКИ
+   ИЛИ ИНЫЕ ПОСЛЕДСТВИЯ, ВОЗНИКШИЕ ИЗ-ЗА ПРОГРАММЫ ИЛИ В СВЯЗИ С ЕЁ
+   ИСПОЛЬЗОВАНИЕМ.
+
+6. Прекращение
+
+   Лицензия прекращается автоматически, если вы нарушили любое из её условий.
+   В этом случае нужно прекратить пользоваться Программой и удалить все её
+   копии.
+
+7. Товарные знаки
+
+   Adobe и Photoshop — товарные знаки Adobe Inc. Pixel Wrap 3D — независимый
+   плагин, он не связан с Adobe и не одобрен ею.
+
+8. Язык
+
+   Лицензия составлена на английском и русском языках. Если тексты
+   расходятся, действует английский.
