@@ -2,139 +2,248 @@
 
 По-русски: [HELP.ru.md](HELP.ru.md)
 
-## What the plugin does
+## What this plugin is
 
-Pixel Wrap 3D wraps a label or a logo around a 3D shape — a cylinder, a sphere, a cone or a body of revolution — and puts the result back into the document as a new layer. You match the shape to the object in the photo, so the label follows it with the right curve and perspective.
+Imagine you have a photo of a bottle and a picture for its label. If you simply put the picture on the photo, it stays flat, like a sticker on the screen. Pixel Wrap 3D wraps it around the bottle like a real label: it bends, goes round the edge and gets smaller where the bottle is farther from you.
 
-Only the label goes into the document. The shape, the grid and the markers are visible in the viewport alone.
+![The WRAP 3D label wrapped around a bottle in a photo.](images/en/hero.jpg)
 
-## Quick start
+_The **WRAP 3D** label wrapped around a bottle in a photo._
 
-1. Select the layer with the label or logo in the document and press **Use selected layer**. A regular layer, text and a smart object all work.
-2. In the **Shape** group pick the shape closest to the object: **Cylinder**, **Sphere**, **Cone** or **Revolve**.
-3. Match the shape to the object in the photo. The fastest way is the **Points** mode: put the markers on the axis and the edges of the object.
-4. In the **Label** mode move the label to where it belongs on the shape.
-5. Press **Apply** and answer the question about inserting — a new layer with the label appears in the document.
+How does it work? Inside the plugin there is an invisible 3D shape: a cylinder, a ball, a cone or a bottle of any shape. You put it on the object in the photo, and the plugin stretches the label over it and puts the result into Photoshop as a new layer. The shape itself, the grid and the markers never get into the document — only the label does.
 
-The next time you open the panel, the scene of the last Apply is restored by itself.
+## Meet the panel
 
-## Mouse modes
+Open the panel from the **Plugins ▸ Pixel Wrap 3D** menu in Photoshop. You can keep it docked or pull it out as a separate window — then it is wider and everything is easier to see.
 
-The buttons above the viewport choose what dragging does.
+![The plugin panel. The numbers are explained in the list below the picture.](images/en/panel.jpg)
 
-- **Shape** — Drag to move the shape over the document. Alt + wheel scales the shape.
-- **Label** — Drag left-right and the label travels around the axis of the shape (that is **Rotation Y**); drag up-down and it moves along the axis. Alt + wheel scales the label.
-- **Rotate** — Drag left-right for **Rotation Z**, up-down for **Rotation X**.
-- **Points** — Fits the shape to markers on the photo — see the next section.
-- **Contour** — The contour editor. The button shows only for a body of revolution.
+_The plugin panel. The numbers are explained in the list below the picture._
 
-In any mode: the wheel zooms the view, Space or the right button + drag pans it, **Fit** shows the whole document. Alt + drag switches to **Label** for the moment, Shift + drag to **Rotate**.
+1. **Use selected layer** takes the layer selected in Photoshop into the plugin.
+2. **Apply** puts the finished label into the document.
+3. The status line. The plugin tells you here what it did. Green text means it worked, red means something is wrong — and says what.
+4. Mouse modes. They decide what the mouse does in the view: move the shape, move the label, turn the shape and so on.
+5. The view: your photo with the shape and the label on it. The mouse wheel zooms in and out, **Fit** shows the whole document.
+6. Settings: numbers, check boxes and buttons. The column scrolls, and each group folds with the triangle next to its name.
+7. The arrows undo and redo.
+8. **?** opens this help.
+9. RU / EN — the panel language.
+10. A hint: what the mouse and keys do right now.
 
-## Fitting by points
+## Quick start: six steps
 
-The fastest way to match the shape to the object. It works for a cylinder, a cone and a body of revolution.
+1. In Photoshop, select the layer with your text or logo and click **Use selected layer**.
+2. Pick a shape like your object: a can — **Cylinder**, a ball — **Sphere**, a cup — **Cone**, a bottle with shoulders and a neck — **Revolve**.
+3. In the **Axis** mode put the shape on the object and click **Refine from photo**.
+4. If you need to, turn the shape in the **Rotate** mode.
+5. In the **Label** mode move the label to where it belongs.
+6. Click **Apply**, and a new layer with the label appears in the document.
 
-1. Switch to the **Points** mode. Markers appear on the shape: square ones on the axis and round ones at the sides.
-2. Put the square markers on the axis of the object: one at its start, the other at its end.
-3. Set the width at each end with the round markers — on the edges of the object.
-4. If the end face of the shape does not match the one in the photo, change **Field of view**: the points stay where they are and the shape re-fits to them.
+Each step is explained below, with pictures. Next time you open the panel, it remembers how things were the last time you clicked **Apply**.
 
-The plugin works out the position, scale, rotations and length of the shape by itself; the perspective comes from how much smaller the far end of the object is than the near one. The radius of the shape can be changed with the points pinned, too. If the lines between the markers turn red, no shape can be built from these points and it stays as it was.
+## Step 1. Take the label
 
-The mode is not available for a sphere or for a contour that closes to a point at an end. An orthographic camera shows no depth: the length of the shape is kept and its turn is worked out from how short the axis looks.
+The label is an ordinary Photoshop layer: text, a logo, a smart object or a picture on a transparent background. It can be any colour.
 
-## Shape
+1. Open the photo you want to put the label on. The document must be in RGB mode.
+2. Put the label into this document as a separate layer.
+3. Select this layer in the **Layers** panel — exactly one.
+4. Click **Use selected layer** (1).
 
-- **Cylinder** — Set by **Radius** and **Height**.
-- **Sphere** — Set by **Radius**.
-- **Cone** — A truncated cone: **Top radius**, **Bottom radius** and **Height**.
-- **Revolve** — A shape built from a contour you draw yourself: a bottle, a can, a vase.
-- **Show shape** — Shows or hides the shape in the viewport.
-- **Polygon grid** — A grid on the shape that makes its rotation and perspective easy to read. It works with the shape hidden as well.
-- **Shape display** — **Fresnel** is a light fill with bright edges. **Solid** is a solid fill; the **Opacity** slider sets how dense it is.
+![Until a layer is taken, the view is empty. Click button (1).](images/en/load.jpg)
 
-## Contour editor
+_Until a layer is taken, the view is empty. Click button (1)._
 
-Opens with the **Edit contour** button or the **Contour** mode. You draw the right half of the silhouette over a snapshot of the document and the plugin revolves it around the axis.
+The plugin remembers how the document looks — that is the backdrop in the view — and takes the label. The layer itself does not change in Photoshop. If you change something in the document later, click **Refresh backdrop**.
 
-- Click an empty spot for a new point; you can drag it straight away.
-- Drag a point to move it. A double click makes it sharp or smooth; the **Sharp** and **Smooth** buttons do the same.
-- Delete or the **Delete point** button removes the selected point.
-- The square on the axis moves the axis, the circle at its end turns it.
+## Step 2. Pick a shape
 
-The editor is flat: trace the silhouette as you see it and set the turn and the camera afterwards. A good contour can be kept in **Contour presets**: type a name and press **Save contour**.
+![The Shape group. The numbers are explained below.](images/en/shape.jpg)
 
-## Shape position
+_The **Shape** group. The numbers are explained below._
 
-- **X** and **Y** — The centre of the shape in document pixels.
+- **(1) Which shape** — **Cylinder** — like a can or a straight bottle. **Sphere** — like a ball or a Christmas bauble. **Cone** — like a cup: narrower at one end, wider at the other. **Revolve** — any round shape whose contour you draw yourself: a bottle with shoulders, a vase, a flask.
+- **(2) Size** — **Radius** and **Height** are how thick and how long the shape is; a cone has **Top radius** and **Bottom radius**. Usually the **Axis** mode sets them, so you don't need to touch them.
+- (3) **Show shape** — Show or hide the shape. The label is visible either way.
+- (4) **Polygon grid** — A grid on the shape, like on a globe. It shows clearly how the shape is turned. It works with a hidden shape too and never gets into the result.
+- (5) **Shape display** — **Fresnel** — a see-through shape with bright edges. **Solid** — a solid one; how solid is set with the **Opacity** slider.
+
+## Step 3. Put the shape on the object: the Axis mode
+
+This is the most important step. You show the plugin where the object's axis is — an imaginary stick through its middle, like a skewer through a kebab — and where its edges are. The plugin works out everything else by itself: where the shape stands, how big it is, how it is turned and how strong the perspective in the photo is.
+
+![The markers are placed roughly — that is fine to start with. (1) — the ends of the axis, (2) — the edges, (3) — the diamond.](images/en/fit-rough.jpg)
+
+_The markers are placed roughly — that is fine to start with. (1) — the ends of the axis, (2) — the edges, (3) — the diamond._
+
+1. Click the **Axis** mode. Markers appear on the shape.
+2. The square markers (1) are the ends of the axis. Put one at the start of the object (the bottom of a bottle) and the other at its end.
+3. The round markers (2) are the edges. Move them to the edges of the object at each end.
+4. The diamond (3) is the edge of the end face — the bottom or the lid — that you can see in the photo. Drag it to that edge in the photo, and **Field of view** is set by itself.
+
+![After Refine from photo (1) the markers sit exactly on the edges of the bottle (3), and the status line (2) tells you what happened.](images/en/fit-refined.jpg)
+
+_After **Refine from photo** (1) the markers sit exactly on the edges of the bottle (3), and the status line (2) tells you what happened._
+
+You don't have to place the markers exactly. Place them roughly and click **Refine from photo** (1): the plugin finds the edges of the object in the photo and moves the markers. If it finds the edge of the bottom, it sets **Field of view** too. The bottom may face you or face away, and its edge is in the same place in the photo either way; the plugin tells which by whether the far half of its rim shows. Don't like the result? Press Cmd+Z.
+
+It works best when the object stands out from the background. Clear glass and dark on dark are found less reliably. If no edges are found, or they are too far away, the axis stays as it was.
+
+A few more rules. The shape turns its front to you: **Rotation Y** becomes 0. You can change **Field of view** and the radius by hand too — the markers stay where they are. If the lines between the markers turn red, no shape can be built from those points, and it stays as it was. If the diamond turns red, the field of view could not be found — for example, the bottom is seen almost edge-on.
+
+This mode does not work for a sphere — a ball has no ends — nor for a contour that closes to a point at an end. **Refine from photo** does not work for a body of revolution: set the axis with a cylinder over the body first, then switch the shape. An orthographic camera has no diamond: there is no perspective there, and the length of the shape is kept.
+
+## Step 4. Turn the shape: the Rotate mode
+
+Usually you don't need to turn anything after the **Axis** mode — the shape already stands right. But if you want to turn it yourself, here is how.
+
+![While you turn the shape, its axes show in its middle: (1) X is red, (2) Y is green and runs along the shape, (3) Z is blue.](images/en/rotate.jpg)
+
+_While you turn the shape, its axes show in its middle: (1) X is red, (2) Y is green and runs along the shape, (3) Z is blue._
+
+Click **Rotate** (4) and drag in the view: left-right turns the shape around the Y axis, up-down around the X axis, with Shift around the Z axis, which looks straight at you. A dashed axis points away from you, a solid one towards you.
+
+- (5) **Rotation X** — Turns around the horizontal axis: the top of the shape towards you or away.
+- (6) **Rotation Y** — Turns around the vertical axis: the shape shows you one end, then the other.
+- (7) **Rotation Z** — Turns around the line of sight — like a clock hand.
+- (8) **The mouse rotates around** — Whose axes the mouse turns around: **World axes** — the scene's, like in a 3D program, **Local axes** — the shape's own.
+- **X** and **Y** — Where the centre of the shape is, in document pixels.
 - **Scale** — The size of the whole shape.
-- **Rotation X** — Turns the top of the shape toward the viewer or away.
-- **Rotation Y** — Turns the shape around its own axis: the label travels around it.
-- **Rotation Z** — Turns the shape in the plane of the picture.
 
-Every rotation is a full circle from 0 to 360°: after 360 comes 0, there are no stops.
+Angles work like in 3D programs: a full circle from 0 to 360°, and after 360 comes 0 again. The shape turns around X first, then around Y, then around Z — all three about the scene's axes.
 
-## Label on shape
+## Step 5. Place the label: the Label mode
 
-- **Along height** — Moves the label along the axis of the shape.
-- **Rotation Z** — Turns the label itself on the surface: 90° lays it sideways, 180° turns it upside down.
-- **Scale** — The size of the label.
-- **Wrap angle** — How much of the circumference the label takes.
-- **Keep label proportions** — Scale and wrap angle change together, so the label is not stretched.
-- **Hide back side** — The part of the label that went behind the shape is not drawn.
+![The Label mode (1) and the label fields (2–8).](images/en/label.jpg)
 
-The **Show label** switch at the top of the panel hides the label in the viewport while you match the shape. It does not affect the result.
+_The **Label** mode (1) and the label fields (2–8)._
 
-## Camera and light
+Click **Label** (1) and drag the label right in the view: left-right moves it around the shape, up-down along it. Alt + mouse wheel makes it bigger or smaller.
 
-- **Perspective** — Near parts of the shape look larger than far ones, as in a photo. **Field of view** sets how strong the perspective is: the larger it is, the stronger.
-- **Orthographic** — No perspective — for objects shot from far away.
-- **Soft shading toward the shape edges** — The label darkens toward the edges of the shape; **Shading strength** sets by how much. Off by default: the colours of the layer are left alone.
+- (2) **Along height** — Higher or lower on the shape.
+- (3) **Rotation Y** — Around the shape — the label goes round in a circle.
+- (4) **Rotation Z** — Turns the label itself on the surface: 90° — on its side, 180° — upside down.
+- (5) **Scale** — The size of the label.
+- (6) **Wrap angle** — How much of the circle the label covers: 360° is the whole way round.
+- (7) **Keep label proportions** — The label does not stretch: size and wrap angle change together.
+- (8) **Hide back side** — The part of the label that went behind the shape is hidden — like on a real label.
 
-## View and backdrop
+The **Show label** check box at the very top of the settings hides the label while you place the shape. It does not affect the result.
 
-- **Document backdrop** — How visible the document is under the shape in the viewport.
-- **Show the source layer in the backdrop** — Shows the flat source layer in the backdrop. It usually gets in the way, so it is off.
-- **Refresh backdrop** — Reads the document again if you changed it in Photoshop.
-- **Reset parameters** — Puts the shape and the label back to the starting state.
-- **Last applied parameters** — Brings back the parameters you last pressed **Apply** with.
+## Step 6. Done: Apply
 
-## Number fields
+Click **Apply**. The plugin asks how to insert the label and remembers your choice.
+
+![The question before inserting.](images/en/apply.jpg)
+
+_The question before inserting._
+
+- (1) **Multiply blend mode** — The label takes the light and shadow of the photo and stops looking like a sticker. Best for a dark label on a light object.
+- (2) **Blur by** — Blurs the label a little if the photo is not very sharp: usually by 1–3 px. A sharp photo needs none.
+- (3) **Cancel** — Changed your mind — insert nothing.
+- (4) **Apply** — Insert.
+
+A new layer appears in the document: the label exactly in its place, on a transparent background. It is one step in Photoshop's history. The source layer does not change. The result area is up to 64 megapixels.
+
+## A bottle with shoulders: Revolve and the contour
+
+Many bottles have shoulders and a neck, and a cylinder won't fit them. For such objects there is the **Revolve** shape: you set its contour — the silhouette — and the plugin spins it around the axis, like a potter making a vase on a wheel.
+
+1. First pick the cylinder, set it along the body of the bottle in the **Axis** mode and click **Refine from photo**.
+2. Switch the shape to **Revolve** — the **Contour** mode opens. The **Edit contour** button opens it too.
+3. Click **Trace from photo**, and the plugin traces the bottle for you.
+4. If something doesn't match, fix the points with the mouse.
+
+![Right after switching, the contour doesn't match the bottle yet. The numbers are explained below.](images/en/lathe-start.jpg)
+
+_Right after switching, the contour doesn't match the bottle yet. The numbers are explained below._
+
+- **(1) A contour point** — Drag it, and the contour line passes under the cursor. A double click makes the point sharp or smooth. A click on an empty spot adds a new point that you can drag straight away.
+- **(2) The square on the axis** — Moves the axis together with the shape.
+- **(3) The circle at the end of the axis** — Turns the shape around the Z axis.
+- **(4) The thin ellipse** — The rim at the end of the shape. It shows how the shape is turned towards you.
+- (5) **Sharp**, **Smooth**, **Delete point** — What to do with the selected point. The Delete key removes it too.
+- (6) **Trace from photo** — Trace the bottle from the photo.
+- (7) **Contour presets** — Keep a good contour: type a name and click **Save contour**.
+
+![After Trace from photo (1) the contour runs along the edges of the bottle (3), and the status line (2) tells you how many points it made.](images/en/lathe-traced.jpg)
+
+_After **Trace from photo** (1) the contour runs along the edges of the bottle (3), and the status line (2) tells you how many points it made._
+
+**Trace from photo** goes along the axis from the bottom up and looks for the edges of the bottle on both sides, tilt and perspective included. The axis and the bottom of the shape stay as they were. It works best when the bottle stands out from the background; clear glass and a cork are found less reliably. If no edges are found, the contour stays as it was. Undo with Cmd+Z.
+
+Why does a point sometimes move somewhere other than the cursor? The shoulders of a tilted bottle look different in the photo from the profile in section, and the plugin moves the point so that the contour line is what passes under the cursor. A faded point is hidden: with a strong tilt a steep shoulder at that height faces you and makes no edge. Such a point moves the way it would on a cylinder. Parts of the shape covered by other parts (a neck behind a shoulder) are still drawn.
+
+![Done: the label on the shoulder of the bottle bends with it.](images/en/lathe-label.jpg)
+
+_Done: the label on the shoulder of the bottle bends with it._
+
+## Mouse modes in short
+
+The buttons above the view decide what the mouse does.
+
+- **Shape** — Drag to move the shape around the document. Alt + wheel — the size of the shape.
+- **Label** — Drag left-right — the label moves around the shape (**Rotation Y**), up-down — along it. Alt + wheel — the size of the label.
+- **Rotate** — Drag to turn the shape. More in step 4.
+- **Axis** — Put the shape on the object with markers — step 3.
+- **Contour** — Draw the contour. The button is there only for a body of revolution.
+
+In any mode: the wheel zooms the view, Space or the right button + drag pans it, **Fit** shows the whole document. Alt + drag switches to **Label** for a moment, Shift + drag to **Rotate**.
+
+## Camera, light and view
+
+![The Camera, Lighting and View groups.](images/en/settings.jpg)
+
+_The **Camera**, **Lighting** and **View** groups._
+
+- (1) **Perspective** and **Orthographic** — Perspective is like a real photo: near things are bigger than far ones. Orthographic has no perspective — for objects shot from far away.
+- (2) **Field of view** — How strong the perspective is: the bigger the angle, the stronger. Usually the **Axis** mode sets it.
+- (3) **Soft shading toward the shape edges** — The label gets darker towards the edges of the shape, like in real life. How much is set by **Shading strength**. Off by default: the label colours stay as they are.
+- (4) **Document backdrop** — How much of the photo shows under the shape in the view.
+- (5) **Show the source layer in the backdrop** — Shows the original flat layer in the backdrop. It usually gets in the way, so it is off.
+- (6) **Refresh backdrop** — Reads the document again if you changed it in Photoshop.
+- **Reset parameters** — Puts the shape and the label back to the start.
+- **Last applied parameters** — Brings back everything as it was the last time you clicked **Apply**.
+
+## How to change numbers
 
 - Type a number and press Enter.
-- The up and down arrows change the value by one step, ten times faster with Shift.
-- Drag the name of a field or the arrows icon left or right. Shift makes it faster, Alt finer.
-
-## Inserting into the document
-
-After you press **Apply** the plugin asks what to do with the label. The choice is remembered.
-
-- **Multiply blend mode** — A dark label takes the light and shadow of the photo and stops looking like a sticker.
-- **Blur by** — Blurs the label by the given number of pixels to match the sharpness of the photo, usually 1–3 px.
-
-The result is a new layer exactly in place, on a transparent background, as a single step in Photoshop's history. The source layer is not changed. The result area is limited to 64 megapixels.
+- The up and down arrow keys change the number by one step, with Shift ten times faster.
+- Drag the field name or the arrows icon left or right. With Shift it goes faster, with Alt more precisely.
 
 ## Undo and redo
 
-- Cmd+Z (Ctrl+Z) steps back, Shift+Cmd+Z or Ctrl+Y steps forward. The two arrows in the panel header do the same.
-- One step is one finished action: a drag, a number, a change of shape.
-- **Apply** is a step in Photoshop's own history. To undo the insert, click the document and press Cmd+Z there.
+- Cmd+Z (Ctrl+Z on Windows) goes one step back, Shift+Cmd+Z or Ctrl+Y one step forward. The two arrows in the panel header do the same.
+- One step is one finished action: a drag, a typed number, a change of shape.
+- **Apply** is a step in Photoshop's own history. To remove an inserted label, click the document and press Cmd+Z there.
 
-## Making the label look real
+## To make the label look real
 
-- For a dark label on a light object turn on **Multiply blend mode** when inserting.
+- Insert a dark label on a light object with **Multiply blend mode**.
 - If the photo is softer than the label, turn on **Blur by**.
-- If the edges of the object darken noticeably, turn on **Soft shading toward the shape edges**.
-- A highlight over the ink is made in Photoshop itself: **Blending Options ▸ Blend If** — let the lightest tones of the underlying layer through.
+- If the edges of the object get noticeably darker, turn on **Soft shading toward the shape edges**.
+- A highlight over the print is made in Photoshop itself: **Blending Options ▸ Blend If** — let the lightest tones of the layer below show through.
+
+## Glossary
+
+- **Axis** — An imaginary line through the middle of a round object, which it spins around: for a bottle, from the bottom to the neck.
+- **End face** — A flat end of the shape: the bottom or the lid.
+- **Contour** — The silhouette of half of the object, as if you cut it along the axis. The plugin spins the contour around the axis and gets the shape.
+- **Perspective** — Near things look bigger, far things smaller. Every camera shoots like that.
+- **Field of view** — How strong the perspective in the photo is. A wide angle is like a phone right next to the object, a narrow one like a zoom from far away.
+- **Marker** — A point you can drag with the mouse.
+- **Layer** — A separate sheet in a Photoshop document. The label is on its own layer, and the plugin puts the result on a new layer too.
+- **Multiply blend mode** — A way of blending: dark darkens the photo and white disappears. That is why the label takes the light and shadow of the photo.
 
 ## If something goes wrong
 
 - **The plugin does not load** — Start Photoshop first, then press **Load** in UXP Developer Tools. After Photoshop restarts the plugin has to be loaded again.
 - **The header shows the wrong version** — Use **Unload** and **Load**: after **Reload** Photoshop keeps the old manifest.
-- **“No layer selected”, “Several layers are selected — select just one”** — Select exactly one layer in the Layers panel and press **Use selected layer**.
+- **“No layer selected”, “Several layers are selected — select just one”** — Select exactly one layer in the **Layers** panel and click **Use selected layer**.
 - **The document is not RGB** — The plugin works with RGB only: **Image ▸ Mode ▸ RGB Color**.
 - **Another document is active** — Go back to the document the layer came from, or take the layer again.
-- **The label disappeared** — It went to the back of the shape. Untick **Hide back side** or turn the shape: **Rotation Y** by 180°.
+- **The label disappeared** — It went to the back of the shape. Clear **Hide back side** or move it: **Rotation Y** in the **Label on shape** group by 180°.
 - **Cmd+Z does nothing** — Use the arrows in the panel header: Photoshop may catch the shortcut before the plugin does.
 - **“The label is outside the document bounds”** — The shape is outside the document, or the whole label is on the back side.
 
