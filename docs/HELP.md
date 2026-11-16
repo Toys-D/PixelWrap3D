@@ -241,8 +241,8 @@ _The **Camera**, **Lighting** and **View** groups._
 
 ## If something goes wrong
 
-- **The plugin does not load** — Start Photoshop first, then press **Load** in UXP Developer Tools. After Photoshop restarts the plugin has to be loaded again.
-- **The header shows the wrong version** — Use **Unload** and **Load**: after **Reload** Photoshop keeps the old manifest.
+- **The panel is not in the menu** — Installed from the .ccx file: restart Photoshop and check in the Creative Cloud app (**Stock & Marketplace ▸ Plugins ▸ Manage plugins**) that Pixel Wrap 3D is there and not disabled. Loaded through UXP Developer Tools: start Photoshop first, then press **Load**; after Photoshop restarts the plugin has to be loaded again.
+- **The header shows the wrong version** — The .ccx file: double-click the new .ccx — it replaces the old version — and restart Photoshop. UXP Developer Tools: use **Unload** and **Load**, because after **Reload** Photoshop keeps the old manifest.
 - **“No layer selected”, “Several layers are selected — select just one”** — Select exactly one layer in the **Layers** panel and click **Use selected layer**.
 - **The document is not RGB** — The plugin works with RGB only: **Image ▸ Mode ▸ RGB Color**.
 - **Another document is active** — Go back to the document the layer came from, or take the layer again.
@@ -250,4 +250,4 @@ _The **Camera**, **Lighting** and **View** groups._
 - **Cmd+Z does nothing** — Use the arrows in the panel header: Photoshop may catch the shortcut before the plugin does.
 - **“The label is outside the document bounds”** — The shape is outside the document, or the whole label is on the back side.
 
-Questions and bugs: pixmap1981@gmail.com or the Issues page at github.com/Toys-D/PixelWrap3D. Attach the lines from the UXP Developer Tools console that start with [Wrap3D].
+Questions and bugs: pixmap1981@gmail.com or the Issues page at github.com/Toys-D/PixelWrap3D. Write the version from the panel header and what you did, and attach a screenshot. If the plugin is loaded through UXP Developer Tools, also attach the lines from its console that start with [Wrap3D].
