@@ -38,6 +38,21 @@ A Photoshop plugin that wraps a label or a logo around a 3D shape and puts the r
 - **Languages.** English and Russian. The panel follows Photoshop's language; switch it with **RU / EN** in the panel header.
 - **Stays offline.** three.js is bundled with the plugin. Nothing is loaded from the network.
 
+## See it in action
+
+<table>
+<tr>
+<td width="50%" valign="top"><img src="docs/images/en/fit-refined.jpg" width="100%" alt="Refine from photo: the cylinder is fitted to the edges of a tilted bottle"><br><b>Refine from photo.</b> Put the axis roughly, and the plugin finds the edges of the bottle and fits the axis, the width and the field of view to them.</td>
+<td width="50%" valign="top"><img src="docs/images/en/lathe-start.jpg" width="100%" alt="The contour editor: half of the profile drawn over the photo in perspective"><br><b>The contour editor.</b> Half of the profile over the photo, in perspective: drag the points to the edges, move and turn the axis.</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><img src="docs/images/en/lathe-traced.jpg" width="100%" alt="Trace from photo: the contour follows the shoulders and the neck of the bottle"><br><b>Trace from photo.</b> The contour follows the edges of the bottle by itself, shoulders and neck included; adjust it if needed.</td>
+<td width="50%" valign="top"><img src="docs/images/en/lathe-label.jpg" width="100%" alt="A label wrapped around a body of revolution built from the traced contour"><br><b>Any profile.</b> The label wraps around the body of revolution built from that contour, perspective included.</td>
+</tr>
+</table>
+
+The numbered marks are explained in the [step-by-step guide](docs/HELP.md).
+
 ## Install
 
 The plugin is not on the Adobe Marketplace, so it is loaded through Adobe's UXP Developer Tools.
@@ -103,6 +118,19 @@ Adobe and Photoshop are trademarks of Adobe Inc. Pixel Wrap 3D is an independent
 Источник — выделенный слой с прозрачностью: текст, логотип, смарт-объект. Четыре формы: цилиндр, сфера, усечённый конус, тело вращения. Редактор контура поверх снимка документа показывает контур таким, каким его видит камера, — с вращениями и перспективой, так что бутылку, повёрнутую к зрителю, можно обвести прямо по фото, а кнопка «Обвести по фото» делает это сама — находит края предмета вдоль оси и строит по ним контур, который потом можно поправить; точки можно добавлять, двигать, удалять и делать острыми или сглаженными, ось — сдвигать и вращать; контуры сохраняются как пресеты. Надпись двигается по высоте и вокруг формы, поворачивается на самой поверхности — хоть набок, хоть вверх ногами, меняет масштаб и угол охвата; часть, уходящая назад, скрывается. Форму можно двигать, масштабировать и вращать вокруг осей сцены X, Y и Z на полный оборот, а мышью — и вокруг её собственных осей; пока форму вращают, в её центре видны оси X, Y и Z, камера ортогональная или перспективная с углом обзора; у каждого параметра есть числовое поле, и каждое число можно тянуть мышью. В режиме «Ось» — кнопка «Поставить по оси» в группе «Форма» или «Ось» вверху, в группе «По фото», — форму можно подогнать по фото: поставьте две точки оси — в начале предмета и в его конце, затем боковыми точками задайте ширину на каждом конце, и плагин сам посчитает положение, масштаб, вращения и длину формы вместе с перспективой; угол обзора подбирается сам, если потянуть ромб к краю торца на фото, или задаётся вручную — форма пересчитывается по тем же точкам. Кнопка «Уточнить по фото» доводит примерно выставленную ось сама: находит края предмета рядом с формой и ставит по ним ось, ширину, а если найдёт край донышка — и угол обзора; работает для цилиндра, конуса и тела вращения (у него подтягивает к краям ось и точки поставленного контура), лучше всего — когда предмет заметно отличается от фона. Действия в панели отменяются и возвращаются: Cmd/Ctrl+Z и Shift+Cmd+Z (или Ctrl+Y), те же две стрелки есть в шапке панели; «Применить» — это шаг в истории самого Photoshop, он отменяется там. Флажок «Показывать надпись» вверху панели убирает надпись из окна просмотра, пока форму совмещают с фото; в результат она попадает всё равно. Флажок «Сетка полигонов» рисует на форме сетку — по ней хорошо видны поворот и перспектива; в результат сетка не попадает. По умолчанию без затенения, цвета надписи не меняются; мягкое затенение к краям включается отдельно. Перед вставкой «Применить» спрашивает, поставить ли новому слою режим «Умножение» (тёмная надпись берёт свет и тень фото) и размыть ли надпись на несколько пикселей под резкость фотографии; по умолчанию оба пункта выключены, выбор запоминается. Результат рендерится в разрешении документа на прозрачном фоне и вставляется новым слоем точно на своё место одной записью в истории. При следующем открытии панели сцена последнего применения восстанавливается.
 
 **Языки:** русский и английский. Панель берёт язык Photoshop, переключить можно кнопками **RU / EN** в её шапке.
+
+<table>
+<tr>
+<td width="50%" valign="top"><img src="docs/images/ru/fit-refined.jpg" width="100%" alt="«Уточнить по фото»: цилиндр подогнан к краям наклонённой бутылки"><br><b>«Уточнить по фото».</b> Поставьте ось примерно — плагин сам найдёт края бутылки и подгонит по ним ось, ширину и угол обзора.</td>
+<td width="50%" valign="top"><img src="docs/images/ru/lathe-start.jpg" width="100%" alt="Редактор контура: половина профиля поверх фото в перспективе"><br><b>Редактор контура.</b> Половина профиля поверх фото, в перспективе: тяните точки к краям, двигайте и поворачивайте ось.</td>
+</tr>
+<tr>
+<td width="50%" valign="top"><img src="docs/images/ru/lathe-traced.jpg" width="100%" alt="«Обвести по фото»: контур прошёл по плечам и горлышку бутылки"><br><b>«Обвести по фото».</b> Контур сам проходит по краям бутылки — с плечами и горлышком; потом его можно поправить.</td>
+<td width="50%" valign="top"><img src="docs/images/ru/lathe-label.jpg" width="100%" alt="Надпись на теле вращения, построенном по обведённому контуру"><br><b>Любой профиль.</b> Надпись ложится на тело вращения, построенное по этому контуру, вместе с перспективой.</td>
+</tr>
+</table>
+
+Что значат номера на картинках, рассказано в [справке по шагам](docs/HELP.ru.md).
 
 **Установка.** Плагина нет в Adobe Marketplace, поэтому он загружается через UXP Developer Tools. Скачайте архив со [страницы релизов](https://github.com/Toys-D/PixelWrap3D/releases/latest) и распакуйте. В Photoshop откройте **Настройки ▸ Внешние модули**, включите **«Включить режим разработчика»** и перезапустите Photoshop. Установите **UXP Developer Tools** из приложения Creative Cloud, нажмите **Add Plugin**, выберите `manifest.json` из распакованной папки, затем **••• ▸ Load**. Панель открывается из меню **Подключаемые модули ▸ Pixel Wrap 3D**.
 
