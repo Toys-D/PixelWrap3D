@@ -22,8 +22,8 @@ _The plugin panel. The numbers are explained in the list below the picture._
 
 1. **Use selected layer** takes the layer selected in Photoshop into the plugin.
 2. **Apply** puts the finished label into the document.
-3. The status line. The plugin tells you here what it did. Green text means it worked, red means something is wrong — and says what.
-4. Mouse modes. They decide what the mouse does in the view: move the shape, move the label, turn the shape and so on.
+3. The status line. The plugin tells you here what it did and what to do next. Green text means it worked, red means something is wrong — and says what.
+4. Modes — two labelled groups of buttons. **Mouse:** — what the mouse does in the view: move the shape, move the label or turn the shape. **From photo:** — fitting the shape to the photo: **Axis** and, for a body of revolution, **Contour**.
 5. The view: your photo with the shape and the label on it. The mouse wheel zooms in and out, **Fit** shows the whole document.
 6. Settings: numbers, check boxes and buttons. The column scrolls, and each group folds with the triangle next to its name.
 7. The arrows undo and redo.
@@ -35,12 +35,12 @@ _The plugin panel. The numbers are explained in the list below the picture._
 
 1. In Photoshop, select the layer with your text or logo and click **Use selected layer**.
 2. Pick a shape like your object: a can — **Cylinder**, a ball — **Sphere**, a cup — **Cone**, a bottle with shoulders and a neck — **Revolve**.
-3. In the **Axis** mode put the shape on the object and click **Refine from photo**.
+3. In the **Shape** group click **Fit by axis**, put the markers on the object and click **Refine from photo**.
 4. If you need to, turn the shape in the **Rotate** mode.
 5. In the **Label** mode move the label to where it belongs.
 6. Click **Apply**, and a new layer with the label appears in the document.
 
-Each step is explained below, with pictures. Next time you open the panel, it remembers how things were the last time you clicked **Apply**.
+The plugin itself tells you what to do next in the status line after each step. Each step is explained below, with pictures. Next time you open the panel, it remembers how things were the last time you clicked **Apply**.
 
 ## Step 1. Take the label
 
@@ -64,10 +64,11 @@ The plugin remembers how the document looks — that is the backdrop in the view
 _The **Shape** group. The numbers are explained below._
 
 - **(1) Which shape** — **Cylinder** — like a can or a straight bottle. **Sphere** — like a ball or a Christmas bauble. **Cone** — like a cup: narrower at one end, wider at the other. **Revolve** — any round shape whose contour you draw yourself: a bottle with shoulders, a vase, a flask.
-- **(2) Size** — **Radius** and **Height** are how thick and how long the shape is; a cone has **Top radius** and **Bottom radius**. Usually the **Axis** mode sets them, so you don't need to touch them.
-- (3) **Show shape** — Show or hide the shape. The label is visible either way.
-- (4) **Polygon grid** — A grid on the shape, like on a globe. It shows clearly how the shape is turned. It works with a hidden shape too and never gets into the result.
-- (5) **Shape display** — **Fresnel** — a see-through shape with bright edges. **Solid** — a solid one; how solid is set with the **Opacity** slider.
+- (2) **Fit to the photo** — The buttons that put the shape on the object: **Fit by axis** turns on the **Axis** mode, **Refine from photo** pulls the shape to the edges in the photo, and a body of revolution also has **Trace from photo**. Each one turns on the mode it needs. A sphere has none of these: it has no axis.
+- **(3) Size** — **Radius** and **Height** are how thick and how long the shape is; a cone has **Top radius** and **Bottom radius**. Usually the **Axis** mode sets them, so you don't need to touch them.
+- (4) **Show shape** — Show or hide the shape. The label is visible either way.
+- (5) **Polygon grid** — A grid on the shape, like on a globe. It shows clearly how the shape is turned. It works with a hidden shape too and never gets into the result.
+- (6) **Shape display** — **Fresnel** — a see-through shape with bright edges. **Solid** — a solid one; how solid is set with the **Opacity** slider.
 
 ## Step 3. Put the shape on the object: the Axis mode
 
@@ -77,7 +78,7 @@ This is the most important step. You show the plugin where the object's axis is 
 
 _The markers are placed roughly — that is fine to start with. (1) — the ends of the axis, (2) — the edges, (3) — the diamond._
 
-1. Click the **Axis** mode. Markers appear on the shape.
+1. Click **Fit by axis** in the **Shape** group — or **Axis** at the top, in the **From photo** group. Markers appear on the shape.
 2. The square markers (1) are the ends of the axis. Put one at the start of the object (the bottom of a bottle) and the other at its end.
 3. The round markers (2) are the edges. Move them to the edges of the object at each end.
 4. The diamond (3) is the edge of the end face — the bottom or the lid — that you can see in the photo. Drag it to that edge in the photo, and **Field of view** is set by itself.
@@ -86,13 +87,13 @@ _The markers are placed roughly — that is fine to start with. (1) — the ends
 
 _After **Refine from photo** (1) the markers sit exactly on the edges of the bottle (3), and the status line (2) tells you what happened._
 
-You don't have to place the markers exactly. Place them roughly and click **Refine from photo** (1): the plugin finds the edges of the object in the photo and moves the markers. If it finds the edge of the bottom, it sets **Field of view** too. The bottom may face you or face away, and its edge is in the same place in the photo either way; the plugin tells which by whether the far half of its rim shows. Don't like the result? Press Cmd+Z.
+You don't have to place the markers exactly. Place them roughly and click **Refine from photo** (1) in the **Shape** group: the plugin finds the edges of the object in the photo and moves the markers. If it finds the edge of the bottom, it sets **Field of view** too. The bottom may face you or face away, and its edge is in the same place in the photo either way; the plugin tells which by whether the far half of its rim shows. Don't like the result? Press Cmd+Z.
 
 It works best when the object stands out from the background. Clear glass and dark on dark are found less reliably. If no edges are found, or they are too far away, the axis stays as it was.
 
 A few more rules. The shape turns its front to you: **Rotation Y** becomes 0. You can change **Field of view** and the radius by hand too — the markers stay where they are. If the lines between the markers turn red, no shape can be built from those points, and it stays as it was. If the diamond turns red, the field of view could not be found — for example, the bottom is seen almost edge-on.
 
-This mode does not work for a sphere — a ball has no ends — nor for a contour that closes to a point at an end. **Refine from photo** does not work for a body of revolution: set the axis with a cylinder over the body first, then switch the shape. An orthographic camera has no diamond: there is no perspective there, and the length of the shape is kept.
+This mode does not work for a sphere — a ball has no ends — nor for a contour that closes to a point at an end. For a body of revolution **Refine from photo** looks for edges next to the contour you already have: it pulls the axis and the contour points to them and leaves the width at the ends and the field of view alone — the markers set those. An orthographic camera has no diamond: there is no perspective there, and the length of the shape is kept.
 
 ## Step 4. Turn the shape: the Rotate mode
 
@@ -152,7 +153,7 @@ Many bottles have shoulders and a neck, and a cylinder won't fit them. For such 
 
 1. First pick the cylinder, set it along the body of the bottle in the **Axis** mode and click **Refine from photo**.
 2. Switch the shape to **Revolve** — the **Contour** mode opens. The **Edit contour** button opens it too.
-3. Click **Trace from photo**, and the plugin traces the bottle for you.
+3. Click **Trace from photo** in the **Shape** group, and the plugin traces the bottle for you.
 4. If something doesn't match, fix the points with the mouse.
 
 ![Right after switching, the contour doesn't match the bottle yet. The numbers are explained below.](images/en/lathe-start.jpg)
@@ -164,14 +165,16 @@ _Right after switching, the contour doesn't match the bottle yet. The numbers ar
 - **(3) The circle at the end of the axis** — Turns the shape around the Z axis.
 - **(4) The thin ellipse** — The rim at the end of the shape. It shows how the shape is turned towards you.
 - (5) **Sharp**, **Smooth**, **Delete point** — What to do with the selected point. The Delete key removes it too.
-- (6) **Trace from photo** — Trace the bottle from the photo.
+- (6) **Trace from photo** — Trace the bottle from the photo. The button is in the **Shape** group, next to **Refine from photo**.
 - (7) **Contour presets** — Keep a good contour: type a name and click **Save contour**.
 
 ![After Trace from photo (1) the contour runs along the edges of the bottle (3), and the status line (2) tells you how many points it made.](images/en/lathe-traced.jpg)
 
 _After **Trace from photo** (1) the contour runs along the edges of the bottle (3), and the status line (2) tells you how many points it made._
 
-**Trace from photo** goes along the axis from the bottom up and looks for the edges of the bottle on both sides, tilt and perspective included. The axis and the bottom of the shape stay as they were. It works best when the bottle stands out from the background; clear glass and a cork are found less reliably. If no edges are found, the contour stays as it was. Undo with Cmd+Z.
+**Trace from photo** goes along the axis from the bottom up and looks for the edges of the bottle on both sides, tilt and perspective included, as far out as the widest part of the contour you already have. The axis and the bottom of the shape stay as they were. It works best when the bottle stands out from the background; clear glass and a cork are found less reliably. If no edges are found, or only near the bottom, the contour stays as it was. Undo with Cmd+Z.
+
+If the body is nothing like a cylinder — a bulb, a vase — put the axis markers on the body of revolution straight away, draw the contour roughly and click **Refine from photo** in the **Shape** group: the plugin pulls both the axis and the contour points to the edges in the photo. You keep as many points as you had.
 
 Why does a point sometimes move somewhere other than the cursor? The shoulders of a tilted bottle look different in the photo from the profile in section, and the plugin moves the point so that the contour line is what passes under the cursor. A faded point is hidden: with a strong tilt a steep shoulder at that height faces you and makes no edge. Such a point moves the way it would on a cylinder. Parts of the shape covered by other parts (a neck behind a shoulder) are still drawn.
 
@@ -181,7 +184,7 @@ _Done: the label on the shoulder of the bottle bends with it._
 
 ## Mouse modes in short
 
-The buttons above the view decide what the mouse does.
+The buttons above the view come in two labelled groups. **Mouse:** — what the mouse does: **Shape**, **Label**, **Rotate**. **From photo:** — fitting the shape to the photo: **Axis** and **Contour**.
 
 - **Shape** — Drag to move the shape around the document. Alt + wheel — the size of the shape.
 - **Label** — Drag left-right — the label moves around the shape (**Rotation Y**), up-down — along it. Alt + wheel — the size of the label.
